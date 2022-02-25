@@ -173,13 +173,13 @@
 
 .cheek {
   width: 80%;
-  height: 10%;
-  background: #f002;
+  height: 20%;
+  background: rgba(199, 33, 33, 0.133);
   border-radius: 20% 20% 100% 100%;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(1vmin)
+  filter: blur(1vmin);
 }
 
 .eyebrow {
