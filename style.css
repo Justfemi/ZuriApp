@@ -1,0 +1,240 @@
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.container div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* .b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+} */
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.container {
+  --skin: #85524b; 
+  --iris: #222;
+  --hair: #111;
+  --shirt: #81a7ee;
+  --line: rgba(80,0,0,0.15);
+}
+
+.face {
+  width: 36%;
+  height: 55%;
+  background: var(--skin);
+  border-radius: 100% 100% / 35% 35% 120% 120%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forehead {
+  width: 30%;
+  height: 11%;
+  border-radius: 50%;
+  background: var(--skin);
+  top: 7%;
+  left: 50%;
+  transform:translate(-50%, -15%);
+}
+
+.neck {
+  width: 25%;
+  height: 20%;
+  background: var(--skin);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 2vmin;
+  border-bottom-left-radius: 6vmin;
+  border-bottom-right-radius: 6vmin;
+  box-shadow: inset 0 25.5vmin 0 -15vmin var(--line), inset 0 -3vmin 0 -1vmin rgba(0,0,0,0.2), inset 0 -3vmin 0 -1vmin var(--shirt);
+}
+
+.mouth {
+  width: 40%;
+  height: 7%;
+  border: 0.25vmin solid rgba(0,0,0,0.2);
+  border-top-color: transparent;
+  border-radius: 100% / 100% 100% 40% 50%;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(2deg);
+}
+
+.nose {
+  width: 26%;
+  height: 30%;
+  background: var(--line);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  clip-path: polygon(50% 0%, 60% 88%, 0% 85%, 55% 100%, 100% 88%);
+}
+
+.ear {
+  width: 8%;
+  height: 15%;
+  border-radius: 90% 100% 70% 100% / 70% 100%;
+  background: var(--skin);
+  box-shadow: inset -9vmin 0 0 -7vmin var(--line);
+  transform: rotate(-15deg);
+  top: 28%;
+  left: 27%;
+}
+
+.ear::before {
+  width: 60%;
+  height: 80%;
+  border-radius: 100% 50% 0 0;
+  border: 0.25vmin solid var(--line);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  top: 15%;
+  left: 4%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.ear::after {
+  width: 2vmin;
+  height: 2vmin;
+  border: 0.25vmin solid var(--line);
+  border-radius: 50%;
+  top: 50%;
+  right: 8%;
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-15deg);
+  left: auto;
+  right: 27%;
+}
+
+.eye {
+  width: 25%;
+  height: 8%;
+  background: white;
+  border-radius:  80% 90% 30% 40% / 70% 100% 90% 100%;
+  top: 30%;
+  right: 7%;
+  box-shadow: 0 -0.5vmin var(--line);
+  overflow: hidden;
+}
+
+.eye + .eye {
+  transform: scaleX(-1);
+  right: auto;
+  left: 7%;
+}
+
+.pupil {
+  width: 10%;
+  height: 15%;
+  background: #222;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  box-shadow: 0 0 0 1.6vmin var(--iris);
+}
+
+.eye-bright {
+  width: 1vmin;
+  height: 1vmin;
+  background: white;
+  border-radius: 50%;
+  top: 25%;
+  left: 40%;
+  box-shadow: -0.5vmin 0.75vmin 0 -0.25vmin white;
+}
+
+.eye + .eye .eye-bright {
+  left: 50%;
+  box-shadow: 0.5vmin 0.75vmin 0 -0.125vmin white;
+}
+
+.cheek {
+  width: 80%;
+  height: 10%;
+  background: #f002;
+  border-radius: 20% 20% 100% 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(1vmin)
+}
+
+.eyebrow {
+  width: 30%;
+  height: 10%;
+  top: 25%;
+  right: 5%;
+  border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
+  box-shadow: -0.25vmin -1.5vmin 0 -0.25vmin rgba(0,0,0,0.1), -0.25vmin -1.5vmin 0 -0.25vmin var(--hair);
+  transform: rotate(5deg);
+}
+
+.eyebrow + .eyebrow {
+  
+  transform: scaleX(-1) rotate(12deg);
+  left: 4%;
+  right: auto;
+}
+
+.hair-back {
+  width: 45%;
+  height: 40%;
+  border-radius: 10% 10% 10% 90% / 10%;
+  background: var(--hair);
+  top: -2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50% 50% / 20% 20% 120% 120%;
+  box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.075);
+}
+
+.shirt-neck {
+  width: 10%;
+  height: 5%;
+  background: var(--shirt);
+  transform:skew(-10deg) rotate(25deg);
+  box-shadow: inset 0 0 0 5vmin rgba(0,0,0,0.1);
+  top: 62%;
+  left: 35%;
+  /* add border-radius to this colar */
+}
+
+.shirt-neck + .shirt-neck {
+  transform: scaleX(-1) skew(-10deg) rotate(25deg);
+  left: auto;
+  right: 35%;
+}
+
+.shoulders {
+  width: 80%;
+  height: 30%;
+  background: var(--shirt);
+  border-radius: 50%;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0% 40%, 40% 10%, 40% 0%, 60% 0%, 60% 10%, 100% 40%, 100% 100%, 0% 100%)
+}
