@@ -1,10 +1,10 @@
 .container {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vmin;
-    height: 80vmin;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
 }
 
 .container div {
@@ -130,7 +130,7 @@
 
 .eye {
   width: 25%;
-  height: 8%;
+  height: 7%;
   background: white;
   border-radius:  80% 90% 30% 40% / 70% 100% 90% 100%;
   top: 30%;
@@ -147,7 +147,7 @@
 
 .pupil {
   width: 10%;
-  height: 15%;
+  height: 10%;
   background: #222;
   border-radius: 50%;
   top: 50%;
@@ -162,13 +162,13 @@
   background: white;
   border-radius: 50%;
   top: 25%;
-  left: 40%;
-  box-shadow: -0.5vmin 0.75vmin 0 -0.25vmin white;
+  left: 45%;
+  box-shadow: -0.05vmin 0.6vmin 0 -0.25vmin white;
 }
 
 .eye + .eye .eye-bright {
   left: 50%;
-  box-shadow: 0.5vmin 0.75vmin 0 -0.125vmin white;
+  box-shadow: 0.05vmin 0.6vmin 0 -0.25vmin white;
 }
 
 .cheek {
@@ -185,7 +185,7 @@
 .eyebrow {
   width: 30%;
   height: 10%;
-  top: 25%;
+  top: 26%;
   right: 5%;
   border-radius:  100% 90% 100% 40% / 70% 100% 90% 100%;
   box-shadow: -0.25vmin -1.5vmin 0 -0.25vmin rgba(0,0,0,0.1), -0.25vmin -1.5vmin 0 -0.25vmin var(--hair);
@@ -193,7 +193,6 @@
 }
 
 .eyebrow + .eyebrow {
-  
   transform: scaleX(-1) rotate(12deg);
   left: 4%;
   right: auto;
